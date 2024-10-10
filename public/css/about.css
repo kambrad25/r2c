@@ -1,0 +1,432 @@
+@font-face {
+    font-family:"PP Neue Montreal Book";
+    src: url("./public/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Book.otf");
+}
+@font-face {
+    font-family: "PP Neue Montreal Thin";
+    src: url("./public/fonts/PP\ Neue\ Montreal\ -\ Free\ for\ Personal\ Use\ v2.6/OTF/PPNeueMontreal-Thin.otf");
+}
+@font-face {
+    font-family: "PP Gatwick Jet Extralight";
+    src: url("./public/fonts/PP\ Gatwick\ -\ Free\ for\ Personal\ Use\ v2.0/otf/PPGatwick-JetExtralight.otf");
+}
+@font-face {
+    font-family: "Roslindale Display Condensed, sans-serif";
+    src: url("../fonts/Roslindale_Web/fonts/RoslindaleDisplayCondensed-Regular.woff");
+}
+:root {
+    --font-family-one: "PP Neue Montreal Book";
+    --font-family-two: "PP Neue Montreal Thin";
+    --font-family-three: "PP Gatwick Jet Extralight";
+
+    --font-family-main: "Roslindale Display Condensed, sans-serif";
+
+    --background-color-primary: #539aa6e5;
+    --background-color-secondary: #3e1406e5;
+    --background-color-ternary: #2e7f8de5;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-family-main);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.4;
+    background-color: white;
+    /* background: hsl(74, 91%, 75%); */
+    color: black;
+    height: 0;
+    min-height: 100%;
+    overflow: hidden;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+ul {
+    list-style: none;
+}
+.border { 
+    border: 1px solid red;
+}
+.upper {
+    text-transform: uppercase;
+}
+.over {
+    overflow: hidden;
+}
+.container {
+    margin: 0 auto;
+    max-width: 90rem;
+    padding: 0 2rem;
+}
+#name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+
+
+.preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    /* height: 100%; */
+    color: white;
+    background: hsl(176, 91%, 13%);
+    perspective: 1000px;
+    z-index: 1;
+    overflow: hidden;
+}
+.preloader > .container {
+    position: relative;
+    min-height: 100%;
+    transform: translateZ(-3000px);
+
+}
+#header{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: .95;
+    
+}
+.header-title {
+    font-size: 5.5rem;
+    color: transparent;
+    -webkit-text-stroke: white;
+    -webkit-text-stroke-width: 1px;
+    font-weight: 100;
+    position: relative;
+}
+.header-title::before {
+    content: attr(data-text);
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    color: white;
+    -webkit-text-stroke: white;
+    -webkit-text-stroke-width: 2.5px;
+    animation: header-title 350ms 2.3s forwards;
+}
+
+.header-subtitle {
+    text-align: end;
+    /* border: 1px solid red; */
+    z-index: 1000;
+}
+.header-subtitle::after {
+    content: "";
+    position: absolute;
+    bottom: -.9rem;
+    right: 0;
+    background-color: white;
+    height: .3rem;
+    width: 0%;
+    border-radius: 10rem;
+    animation: line-dash 350ms 2.3s forwards;
+}
+.subtitle {
+    min-height: 5rem;
+    position: relative;
+    top: .3rem;
+    overflow: hidden;
+    /* text-align: center; */
+    /* border: 1px solid red;; */
+}
+.subtitle-tag {
+    /* border: 1px solid red; */
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    top: -100%;
+    animation: sub-tag 350ms 3s forwards
+}
+@keyframes header-title {
+    to {
+        height: 100%;
+    }
+}
+@keyframes line-dash {
+    to {
+        width: 100%;
+    }
+}
+@keyframes sub-tag {
+    to {
+        top: 0;
+    }
+}
+#name {
+    display: none;
+}
+.name-name {
+    font-size: 6rem;
+    transform: scale(.8);
+    white-space: nowrap;
+    font-weight: 800;
+    opacity: 1;
+    /* display: none; */
+    text-shadow: .5px 0 1.5px black;
+}
+.box {
+    width: 30rem;
+    height: 30rem;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    height: 0;
+    opacity: 1;
+}
+main {
+    min-height: 100%;
+}
+main > .container {
+    min-height: 80rem;
+}
+nav {
+    min-height: 12rem;
+    display: flex;
+    width: 100%;
+    border-bottom: 3px solid;
+    margin: auto;
+    /* max-width: 50%; */
+    max-width: 0;
+    overflow: hidden;
+    transition: 350ms ease;
+    opacity: 1;
+    /* height: 5px; */
+    /* transform: rotateZ(-15deg); */
+}
+.nav-hide {
+    min-height: 0;
+    height: 0;
+    opacity: 0;
+
+}
+.nav-logo {
+    flex: 1;
+    text-align: center;
+    align-content: center;
+}
+.nav-logo-title {
+    transform: scale(2);
+    position: relative;
+    top: 20rem;
+    /* border-bottom: 1px solid; */
+}
+.hero {
+    margin-top: 3rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.image-gallery {
+    /* border: 2px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 60px);
+}
+.img {
+    width: 10rem;
+    /* border: 3px solid red; */
+    height: 15rem;
+    position: relative;
+    top: 30rem;
+    /* transform: translateY(30rem); */
+}
+.img-hide {
+    top: 30rem;
+    transition: 350ms ease;
+}
+.img > img {
+    height: 100%;
+}
+.image-one {
+    grid-column: 1;
+    grid-row: 2;
+    transform: rotateZ(-45deg);
+}
+.image-two {
+    grid-column: 2;
+}
+.image-three {
+    grid-column: 3;
+    grid-row: 2;
+    transform: rotateZ(45deg);
+}
+
+.scroll-tag {
+    text-align: center;
+    overflow: hidden;
+}
+.scroll-down-tag {
+    position: relative;
+    top: -20rem;
+}
+
+/* .arrow-down {
+    width: 100%;
+    height: 20rem;
+    border: 1px solid red;
+    padding: 4rem;
+    margin-bottom: 2rem
+}
+.arrow-down img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+} */
+ .black {
+    width: 100%;
+    height: 0;
+    min-height: 200rem;
+    background-color: black;
+    position: relative;
+    z-index: 10;
+    color: white;
+    padding-top: 10rem;
+    /* position: absolute;
+    left: 0;
+    bottom: -50%; */
+    /* top: 50rem; */
+    
+ }
+
+ .introduction > * > h1{
+    font-size: 3.5rem;
+    letter-spacing: -2px;
+    color: hsl(74, 91%, 75%);
+ }
+ .black-sec-header {
+    text-align: center;
+    overflow: hidden;
+    min-height: 100rem;
+ }
+ .black-sec-header p {
+    position: relative;
+    top: -10rem;
+    transition: all 650ms ease;
+ }
+ .black-sec-header > h1 {
+    color: hsl(74, 91%, 75%);
+    filter: blur(6px);
+ }
+.introduction.container {
+    min-height: 100%;
+}
+
+
+
+
+.info {
+    background-color: black;
+    height: 100rem;
+    position: relative;
+    top: 2rem;
+    /* border: 2px solid red; */
+}
+.info-based {
+    overflow: hidden;
+    position: relative;
+}
+.info-based > h1 {
+    position: relative;
+    top: -5rem;
+    transition: all 350ms 650ms ease;
+    /* border-bottom: 4px solid white; */
+    padding-bottom: .5rem;
+}
+.bio {
+    color: white;
+}
+.info-wrapper {
+    border: 1px solid red;
+    position: fixed;
+    top: 100%;
+    /* top: 0; */
+    background-color: white;
+    color: black;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: top 1024ms ease-in;
+    /* height: 100%; */
+}
+.state-img-wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 20rem;
+    align-items: center;
+    background-color: black;
+}
+.state-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: flex;
+}
+.state-img > img {
+    background-color: white;
+    padding-top: 1.5rem;
+    transform: scale(0);
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: transform 650ms 1s ease;    
+}
+
+
+
+@media (min-width: 300px) {
+    .img {
+        width: 9rem;
+        height: 12rem;
+    }
+}
+
+@media (min-width: 414px) {
+    .img {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+    }
+    .img > img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
