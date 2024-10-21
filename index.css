@@ -719,7 +719,7 @@ svg {
     border-radius: 50%;
     padding: 5rem;
     transform: rotate(0deg);
-    animation: b 5s infinite linear reverse;
+    animation: b 5s infinite linear;
 }
 /* END SECTION */
 
