@@ -199,7 +199,7 @@ function home() {
         setTimeout(() => {
             document.body.style.overflow = "scroll";
             lenis.start();
-        }, 7000);
+        }, 6000);
     }
 
     function touchend() {
@@ -211,7 +211,7 @@ function home() {
         setTimeout(() => {
             document.body.style.overflow = "scroll";
             lenis.start();
-        }, 8000);
+        }, 6000);
     }
 
     window.addEventListener("wheel", wheel);
