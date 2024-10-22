@@ -716,7 +716,7 @@ svg {
     height: 100%;
     min-height: 200%;
     /* height: calc(100% + 50px); */
-    border-radius: 50%;
+    border-radius: 50% 60%;
     padding: 5rem;
     transform: rotate(0deg);
     animation: b 5s infinite linear;
