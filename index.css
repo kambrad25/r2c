@@ -455,6 +455,7 @@ nav {
     position: relative;
     top: -1.5rem;
     border-bottom: 2px solid black;
+    display: none;
 
     /* margin: auto; */
     width: 0;
