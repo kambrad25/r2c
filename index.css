@@ -1461,12 +1461,7 @@ svg {
         position: fixed;
 
     }
-    .hero-text-header {
-        max-width: 89%;
-    }
-    .hero-menu-footer {
-        max-width: 87%;
-    }
+    
     /* .footer-wrapper {
         min-height: 8rem;
         width: 0;
