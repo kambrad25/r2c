@@ -1554,6 +1554,7 @@ footer {
 .footer-title > h1 {
     -webkit-text-stroke: unset;
     color: black;
+    display: none;
 }
 
 
