@@ -1548,6 +1548,7 @@ svg {
 footer {
     height: 60rem;
     position: relative;
+    display: none;
     /* top: 400rem; */
 }
 .footer-title > h1 {
