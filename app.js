@@ -685,7 +685,8 @@ function home() {
 
         let reviewsTop = reviews.getBoundingClientRect().top;
         if ((reviewsTop + 100) < height) {
-            document.documentElement.style.background = "white";
+            document.documentElement.style.backgroundColor = "white";
+            document.documentElement.style.transition= "background-color 150ms ease"; 
         }
 
 
