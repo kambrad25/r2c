@@ -1487,7 +1487,7 @@ svg {
 
 @keyframes carousel {
     to {
-        transform: translate(calc(-50% - 1.5rem));
+        transform: translate(calc(-50% - 2rem));
     }
 }
 
