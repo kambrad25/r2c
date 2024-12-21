@@ -335,7 +335,7 @@ function home() {
 
         if (y >= 10) {
             window.removeEventListener("wheel", wheel);
-            window.removeEventListener("touchend", touchend);
+            // window.removeEventListener("touchend", touchend);
 
             rl.kill();
 
