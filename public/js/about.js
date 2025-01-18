@@ -535,6 +535,7 @@ const preload = () => {
             }
 
             navMenuMM.add("(min-width: 700px)", () => {
+                document.body.style.overflow = "scroll";
                 lenis.start();
 
                 navMenuTimeline.reverse();
